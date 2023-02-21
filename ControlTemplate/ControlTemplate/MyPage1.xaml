@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ControlTemplate.MyPage1"
+    ControlTemplate="{StaticResource CustomNavBar}">
+    <ContentPage.Content>
+ <StackLayout HorizontalOptions="Fill">
+     <Label Text="Page1" HorizontalOptions="Center"></Label>
+            <Label Text="name"></Label>
+            <Entry Text="pls enter name"></Entry>
+                <Label Text="prenom"></Label>
+            <Entry Text="pls enter prenom"></Entry>
+                <StackLayout BackgroundColor="red"   >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="theme sombre" x:Name="sombretheme" Clicked="sombretheme_Clicked">  </Button>
+                                <Button Text="defaulttheme" x:Name="defaultname" Clicked="defaultname_Clicked">  </Button>
+                            </StackLayout>           
+                    </StackLayout> 
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

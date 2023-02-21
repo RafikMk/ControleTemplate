@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ControlTemplate.MyPage3"
+        ControlTemplate="{StaticResource CustomNavBar}">
+
+    <ContentPage.Content>
+          <StackLayout HorizontalOptions="Fill">
+                        <Label Text="Page3" HorizontalOptions="Center"></Label>
+
+            <Label Text="name"></Label>
+            <Entry Text="pls enter name"></Entry>
+                <Label Text="prenom"></Label>
+            <Entry Text="pls enter prenom"></Entry>
+                        <Button Text="Fermer modal" x:Name="FermerModal" Clicked="FermerModal_Clicked"  ></Button>
+              <Label Text="{Binding Name}"
+           FontSize="48"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+             <Label x:Name="label" 
+               Text="TEXT"
+               FontSize="48"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+        <Slider x:Name="slider" BackgroundColor="red" Value="20"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand" />
+
+            <Label BindingContext="}" Text="{Binding Source={x:Reference slider1}, Path=Value}"></Label>
+
+
+            <Label Text="TEXT" 
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               BindingContext="{x:Reference Name=slider1}"
+               Rotation="{Binding Path=Value}" />
+
+        <Slider x:Name="slider1"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

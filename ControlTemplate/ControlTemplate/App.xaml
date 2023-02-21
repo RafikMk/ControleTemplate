@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlTemplate.App">
+    <Application.Resources>
+<ResourceDictionary>
+  <ControlTemplate x:Key="CustomNavBar">
+ <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+                    <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" Text="Page1" Clicked="Button_Clicked"></Button>
+                    <Button Grid.Row="0"  Grid.Column="1"  Text="Page2"  Clicked="page2_Clicked"></Button>
+                    <Button Grid.Row="0"  Grid.Column="2"  Text="Page3" Clicked="Button_Clicked_1"></Button>
+
+       <BoxView Grid.Row="1" Grid.ColumnSpan="3" BackgroundColor="#d6cecc"></BoxView>
+             <ContentPresenter VerticalOptions="Center" Grid.Row="1" Grid.ColumnSpan="3"/>
+
+                    
+                  <StackLayout BackgroundColor="red" Grid.Row="2" Grid.ColumnSpan="3"  >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="theme sombre" >  </Button>
+                                <Button Text="defaulttheme">  </Button>
+                            </StackLayout>           
+                    </StackLayout>      
+
+    </Grid>
+  </ControlTemplate>
+             <ControlTemplate x:Key="sombretheme">
+ <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+                    <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" Text="Page1" Clicked="Button_Clicked"></Button>
+                    <Button Grid.Row="0"  Grid.Column="1"  Text="Page2"  Clicked="page2_Clicked"></Button>
+                    <Button Grid.Row="0"  Grid.Column="2"  Text="Page3" Clicked="Button_Clicked_1"></Button>
+
+       <BoxView Grid.Row="1" Grid.ColumnSpan="3" BackgroundColor="White"></BoxView>
+             <ContentPresenter VerticalOptions="Center" Grid.Row="1" Grid.ColumnSpan="3"/>
+
+                    
+                  <StackLayout BackgroundColor="red" Grid.Row="2" Grid.ColumnSpan="3"  >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                <Button Text="theme sombre" x:Name="sombretheme" Clicked="sombretheme_Clicked">  </Button>
+                                <Button Text="defaulttheme" x:Name="defaultname" Clicked="defaultname_Clicked">  </Button>
+                            </StackLayout>           
+                    </StackLayout>      
+
+    </Grid>
+  </ControlTemplate>
+
+</ResourceDictionary>
+
+    </Application.Resources>
+</Application>

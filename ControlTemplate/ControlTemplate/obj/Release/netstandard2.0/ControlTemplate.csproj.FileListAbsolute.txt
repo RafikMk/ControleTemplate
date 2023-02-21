@@ -1,0 +1,17 @@
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/bin/Release/netstandard2.0/ControlTemplate.deps.json
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/bin/Release/netstandard2.0/ControlTemplate.dll
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/bin/Release/netstandard2.0/ref/ControlTemplate.dll
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/bin/Release/netstandard2.0/ControlTemplate.pdb
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ControlTemplate.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/App.xaml.g.cs
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/MainPage.xaml.g.cs
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/MyPage1.xaml.g.cs
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/MyPage2.xaml.g.cs
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/MyPage3.xaml.g.cs
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ControlTemplate.AssemblyInfoInputs.cache
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ControlTemplate.AssemblyInfo.cs
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ControlTemplate.csproj.CoreCompileInputs.cache
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/XamlC.stamp
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ControlTemplate.dll
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ref/ControlTemplate.dll
+/Users/rafik/Projects/ControlTemplate/ControlTemplate/ControlTemplate/obj/Release/netstandard2.0/ControlTemplate.pdb

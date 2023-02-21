@@ -1,0 +1,51 @@
+﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupConfiguration="{05A66FF0-AB44-43B1-9B35-08A9ABAA9784}|Default">
+  <MonoDevelop.Ide.ItemProperties.ControlTemplate.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ControlTemplate/ControlTemplate/MyPage2.xaml">
+    <Files>
+      <File FileName="ControlTemplate/ControlTemplate/MyPage3.xaml.cs" IsPinned="True" />
+      <File FileName="ControlTemplate/ControlTemplate/MyPage1.xaml" Line="23" Column="1" />
+      <File FileName="ControlTemplate/ControlTemplate/MyPage1.xaml.cs" />
+      <File FileName="ControlTemplate/ControlTemplate/App.xaml" />
+      <File FileName="ControlTemplate/ControlTemplate/App.xaml.cs" />
+      <File FileName="ControlTemplate/ControlTemplate/MyPage2.xaml" Line="62" Column="1" />
+      <File FileName="ControlTemplate/ControlTemplate/MyPage2.xaml.cs" Line="24" Column="9" />
+      <File FileName="ControlTemplate/ControlTemplate/MyPage3.xaml" />
+      <File FileName="ControlTemplate/ControlTemplate/TestViewModel.cs" Line="256" Column="1" />
+      <File FileName="ControlTemplate/ControlTemplate/coffe.cs" />
+      <File FileName="ControlTemplate/ControlTemplate/CoffeeServic.cs" />
+      <File FileName="ControlTemplate/ControlTemplate.Android/MainActivity.cs" />
+      <File FileName="ControlTemplate/ControlTemplate/Post.cs" Line="9" Column="40" />
+      <File FileName="ControlTemplate/ControlTemplate.Android/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="ControlTemplate/ControlTemplate.Android/Properties/AndroidManifest.xml" Line="7" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ControlTemplate" expanded="True">
+            <Node name="ControlTemplate" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MyPage1.xaml" expanded="True" />
+              <Node name="MyPage2.xaml" expanded="True" selected="True" />
+              <Node name="MyPage3.xaml" expanded="True" />
+            </Node>
+            <Node name="ControlTemplate.Android" expanded="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ControlTemplate.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.Pixel_3a_API_33_x86_64" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_3a_API_33_x86_64" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Name="coffepage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ControlTemplate.MyPage2"
+        ControlTemplate="{StaticResource CustomNavBar}"
+        xmlns:viewmodels="clr-namespace:ControlTemplate"
+        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+        xmlns:local="clr-namespace:ControlTemplate">
+    <ContentPage.BindingContext>
+     <viewmodels:TestViewModel></viewmodels:TestViewModel>
+    </ContentPage.BindingContext>
+       <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter">
+            </xct:ItemSelectedEventArgsConverter>
+        </ResourceDictionary>
+         <ResourceDictionary>
+        <local:TitleToDisplayConverter x:Key="titleToDisplayConverter"/>
+    </ResourceDictionary>
+
+    </ContentPage.Resources>
+         <StackLayout HorizontalOptions="Fill">
+
+        <Button Text="add Post " x:Name="addpost" Command="{Binding AddPost}"></Button>
+
+            <Picker Title="Sélectionnez Contries"
+    ItemsSource="{Binding Contries}"
+    ItemDisplayBinding="{Binding countryCode}"
+            SelectedItem="{Binding SelectedContrie}"
+    VerticalOptions="CenterAndExpand">
+</Picker>
+
+
+    <Picker Title="Sélectionnez une option"
+            SelectedItem="{Binding SelectedPosts}"
+    ItemsSource="{Binding Posts}"
+    ItemDisplayBinding="{Binding title, Converter={StaticResource titleToDisplayConverter}}"
+    VerticalOptions="CenterAndExpand">
+</Picker>
+
+         <!--
+         ********************* Avec ItemSelected="ListView_ItemSelected"
+                                    ItemTapped="ListView_ItemTapped"
+        <ListView  BackgroundColor="Transparent"
+                       ItemsSource="{Binding coffeeGroups}"
+                       IsGroupingEnabled="True"
+                       GroupDisplayBinding="{Binding Key }"
+                       SeparatorVisibility="None"
+                       HasUnevenRows="True"
+                       RowHeight="100"
+                       IsPullToRefreshEnabled="True"
+                       IsRefreshing="{Binding IsBusy,Mode=OneWay}"
+                       RefreshCommand="{Binding Refreshcommand}"
+                       CachingStrategy="RecycleElement"
+                       ItemSelected="ListView_ItemSelected"
+                       ItemTapped="ListView_ItemTapped"
+                       RefreshControlColor="red">-->
+    <ListView  BackgroundColor="Transparent"
+                       ItemsSource="{Binding coffeeGroups}"
+                       IsGroupingEnabled="True"
+                       GroupDisplayBinding="{Binding Key }"
+                       SeparatorVisibility="None"
+                       HasUnevenRows="True"
+                       RowHeight="100"
+                       IsPullToRefreshEnabled="True"
+                       IsRefreshing="{Binding IsBusy,Mode=OneWay}"
+                       RefreshCommand="{Binding Refreshcommand}"
+                       CachingStrategy="RecycleElement"
+                  SelectedItem="{Binding SelectedCofee, Mode=TwoWay}"
+                       RefreshControlColor="red">
+      
+                <!--  <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>   item one  </x:String>
+                         <x:String>   item tow  </x:String>
+                       <x:String>   item tree  </x:String>
+  </x:Array> </ListView.ItemsSource>-->
+
+            <!--
+            <ListView.Behaviors>
+                <xct:EventToCommandBehavior EventName="ItemSelected"
+                                            Command="{Binding SelectedCommand}"
+                                            EventArgsConverter="{StaticResource ItemSelectedEventArgsConverter}">
+
+                </xct:EventToCommandBehavior>
+
+            </ListView.Behaviors>-->
+                <ListView.ItemTemplate>
+                    <!--  <DataTemplate>
+                    <ImageCell Text="{Binding Name}"
+                                 Detail="{Binding Roaster}">
+                        </ImageCell>     </DataTemplate.>  -->
+                    <DataTemplate x:DataType="viewmodels:coffe">
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Favorite1" Clicked="MenuItem_Clicked" ></MenuItem>
+                                <MenuItem Text="Favorite2" Command="{Binding Source={x:Reference coffepage} , Path=BindingContext.FavouriteCommand}"  CommandParameter="{Binding .}" ></MenuItem>
+
+                                <MenuItem Text="Delete"></MenuItem>
+
+                            </ViewCell.ContextActions>
+                            <Grid Padding="10">
+                                <Frame CornerRadius="60" HasShadow="True">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label VerticalOptions="Center"  FontSize="Large" Text="{Binding Name}"></Label>
+                                        <Label VerticalOptions="Center"  FontSize="Large" Text="{Binding Roaster}"></Label>
+
+                                        <Button Text="Faborite" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:TestViewModel}},Path=FavouriteCommand}"
+                                            CommandParameter="{Binding .}"></Button>
+                                    </StackLayout>
+                                </Frame>
+
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+    </ListView>
+    <!--     <Label Text="Page2" HorizontalOptions="Center"></Label>
+
+            <Label Text="name"></Label>
+            <Entry Text="pls enter name"></Entry>
+                <Label Text="prenom"></Label>
+            <Entry Text="pls enter prenom"></Entry>-->
+    <Button Text="open modal" x:Name="openmodal"  ></Button>
+    <Entry Text="{Binding Path=Countdisplay}"></Entry>
+    <BoxView BackgroundColor="Black"></BoxView>
+    <Label Text="{Binding Path=Countdisplay}"></Label>
+
+    <Button Text="clic hey" Clicked="cloick"></Button>
+
+    <Button Text="j" Command="{Binding increaseButton}" BackgroundColor="Brown"></Button>
+    <Label Text="{Binding Path=Countdisplay2}"></Label>
+
+    </StackLayout></ContentPage>
