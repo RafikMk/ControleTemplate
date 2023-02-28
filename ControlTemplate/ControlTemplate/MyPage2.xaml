@@ -7,12 +7,25 @@
         ControlTemplate="{StaticResource CustomNavBar}"
         xmlns:viewmodels="clr-namespace:ControlTemplate"
         xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-        xmlns:local="clr-namespace:ControlTemplate">
+        xmlns:local="clr-namespace:ControlTemplate"
+               xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             >
     <ContentPage.BindingContext>
      <viewmodels:TestViewModel></viewmodels:TestViewModel>
     </ContentPage.BindingContext>
        <ContentPage.Resources>
         <ResourceDictionary>
+               <Color x:Key="orange" >orange</Color>
+        <Color x:Key="LayoutBackgroundColor">Orange</Color>
+
+            <Style x:Key="buttonmodal" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Pink"></Setter>
+                <Setter Property="FontSize" Value="{OnPlatform Android=30 ,macOS=10,Default=2}"></Setter>
+            </Style>
+            <Style TargetType="Button" x:Key="buttonmodalChild" BasedOn="{StaticResource buttonmodal}">
+                <Setter Property="TextColor" Value="White"></Setter>
+
+            </Style>
             <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter">
             </xct:ItemSelectedEventArgsConverter>
         </ResourceDictionary>
@@ -21,7 +34,10 @@
     </ResourceDictionary>
 
     </ContentPage.Resources>
-         <StackLayout HorizontalOptions="Fill">
+       <!-- <StackLayout HorizontalOptions="Fill"   BackgroundColor="{DynamicResource Layoutbackground}">--> 
+            <!--  <StackLayout HorizontalOptions="Fill"   BackgroundColor="{AppThemeBinding Dark={StaticResource Layoutbackground},Light=pink}">-->   
+         <StackLayout HorizontalOptions="Fill"   BackgroundColor="{DynamicResource LayoutBackgroundColor}">
+
 
         <Button Text="add Post " x:Name="addpost" Command="{Binding AddPost}"></Button>
 
@@ -69,7 +85,7 @@
                        RefreshCommand="{Binding Refreshcommand}"
                        CachingStrategy="RecycleElement"
                   SelectedItem="{Binding SelectedCofee, Mode=TwoWay}"
-                       RefreshControlColor="red">
+                       RefreshControlColor="{StaticResource orange}">
       
                 <!--  <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
@@ -124,7 +140,7 @@
             <Entry Text="pls enter name"></Entry>
                 <Label Text="prenom"></Label>
             <Entry Text="pls enter prenom"></Entry>-->
-    <Button Text="open modal" x:Name="openmodal"  ></Button>
+    <Button Style="{StaticResource buttonmodalChild}" Text="open modal" x:Name="openmodal"  ></Button>
     <Entry Text="{Binding Path=Countdisplay}"></Entry>
     <BoxView BackgroundColor="Black"></BoxView>
     <Label Text="{Binding Path=Countdisplay}"></Label>
@@ -133,5 +149,5 @@
 
     <Button Text="j" Command="{Binding increaseButton}" BackgroundColor="Brown"></Button>
     <Label Text="{Binding Path=Countdisplay2}"></Label>
-
+    <Button Text="Change Background Color" Clicked="Button_Clicked"/>
     </StackLayout></ContentPage>

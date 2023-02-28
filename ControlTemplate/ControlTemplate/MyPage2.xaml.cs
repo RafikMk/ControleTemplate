@@ -87,6 +87,19 @@ namespace ControlTemplate
         void addpost_Clicked(System.Object sender, System.EventArgs e)
         {
         }
+
+         void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var random = new Random();
+            var random1 = random.Next(0, 256);
+            var random2 = random.Next(0, 256);
+            var random3 = random.Next(0, 256);
+            // await DisplayAlert("Favorite cofee", "ee", "ok");
+            Resources["LayoutBackgroundColor"] = Color.FromRgb(random.Next(256), random.Next(256), random.Next(256));
+
+            //   App.Current.Resources["LayoutBackground"] = Color.FromHex("#FFFFFF");
+
+        }
     }
 }
 

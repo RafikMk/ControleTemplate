@@ -253,7 +253,7 @@ namespace ControlTemplate
             };
             var json = JsonConvert.SerializeObject(Post);
             System.Diagnostics.Debug.WriteLine("eeeee"+ json);
-
+               
             try
             {
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -270,7 +270,7 @@ namespace ControlTemplate
                         System.Diagnostics.Debug.WriteLine(posts[0].title);
                     }
                     else
-                    {
+                    { 
                         System.Diagnostics.Debug.WriteLine("eeeee");
 
                     }
@@ -297,11 +297,11 @@ namespace ControlTemplate
 
             Countdisplay = $"you clickerd  {count}";
         }
-
+          
         private async void GetData()
         {
             var client = new HttpClient();
-            try
+            try 
             {
                 var response = await client.GetAsync("http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso/ListOfCountryNamesGroupedByContinent");
              //  System.Diagnostics.Debug.WriteLine(response);
