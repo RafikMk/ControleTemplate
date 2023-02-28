@@ -287,7 +287,7 @@ namespace ControlTemplate
                 System.Diagnostics.Debug.WriteLine("eeeee" + e);
 
             }
-
+            //d
                
         }  
         private void buttonevent(object parameter)
